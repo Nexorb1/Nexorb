@@ -1,0 +1,197 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "calibri";   
+}
+
+header{
+    background: #292d2f;
+    width: 100%;
+    clear:both;
+    content: "";
+    display: table;
+}
+
+menu{
+    width: 900px;
+    margin: 0 auto;   
+}
+
+.logo{
+    width: 120px;
+    height: 60px;
+    float: left;
+    padding:8px;
+}
+
+nav{
+    float:right;
+}
+nav ul li {
+    list-style:none;
+    margin-left: 40px;
+    margin-right: 25px;
+    padding:12px 0;
+    float:left;
+    position: relative;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(229, 229, 229);
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    display: block;
+    content:"";
+    width:0%;
+    background: rgb(232, 221, 16);
+    height:5px;
+    top:0;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+div{
+    color: #fff;
+    font-size: 20px; 
+}
+div > div{
+    background-color: #000000ab;
+    padding: 3em; 
+}
+
+.contnos{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100%;
+    gap: 1em;
+}
+.main{
+    grid-column: 1 / 11;
+    font-size: 12px;
+}
+.nos{
+    background: url(../img/vacaciones.jpg);
+    background-position: center;    
+}
+.tarjetitas{
+    background-color: transparent;
+    margin: 0;
+    display: inline-table;
+    padding: 0;
+    font-size: 12px; 
+    
+}
+#izquierdo{
+    grid-column: 1 / 7;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+       
+}
+#derecho{
+    grid-column: 7 / 11;
+    font-size: 14px;
+}
+footer {
+    display: flex; flex-direction: column;
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 5vw 3vw;
+    gap: 3vw;
+}
+
+footer > .left {
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap:3vw; color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+.left p {margin:0}
+@media only screen and (min-width:750px)  {    
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: black;
+        box-sizing: border-box;
+        padding: 5vw 3vw;       
+    }
+    
+    footer > .left {
+        display: flex; flex-direction: column;
+        align-items: baseline;
+        gap:3vw; color: white;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: white;
+        margin: 0;
+    }
+    .left p {margin:0}
+    #derecho{
+        font-size: 20px;
+    }
+    .main{
+        font-size: 20px;
+    }
+    .tarjetitas{
+        display: flex;
+        background-color: transparent;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        font-size: 20px; 
+    }
+}
+@media only screen and (min-width:1000px)  {
+    footer {padding: 2vw 3vw}
+    iframe{border-radius: 20px;}
+    .tarjetitas{
+        display: flex;
+        background-color: transparent;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        font-size: 25px; 
+    }
+    .main{
+        font-size: 25px;
+    }
+    #derecho{
+        font-size: 25px;
+    }
+    .nos{
+        background: url(../img/vacaciones.jpg);
+        height: 100%;
+        width: 100%;    
+    }
+    #izquierdo{
+        grid-column: 1 / 8;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+           
+    }
+    #derecho{
+        grid-column: 8 / 11;
+        font-size: 20px;
+    }
+}
